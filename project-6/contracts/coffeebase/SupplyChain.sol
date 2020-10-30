@@ -1,15 +1,7 @@
 pragma solidity ^0.4.24;
 // Define a contract 'Supplychain'
-import "./FarmerRole.sol";
-import "./DistributorRole.sol";
-import "./RetailerRole.sol";
-import "./ConsumerRole.sol";
 
-contract SupplyChain {
-  using FarmerRole for FarmerRole.farmers;
-  using DistributorRole for DistributorRole.distributors;
-  using RetailersRole for RetailerRole.retailers;
-  using ConsumerRole for ConsumerRole.consumers;
+contract SupplyChain is FarmerRole, DistributorRole, RetailerRole, ConsumerRole {
 
 
   // Define 'owner'
@@ -188,7 +180,7 @@ contract SupplyChain {
   // Define a function 'processtItem' that allows a farmer to mark an item 'Processed'
     function processItem(uint _upc) public
   // Call modifier to check if upc has passed previous supply chain stage
-    
+
   // Call modifier to verify caller of this function
 
     {
