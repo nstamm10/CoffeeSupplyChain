@@ -166,22 +166,25 @@ contract SupplyChain {
         items[_upc].originFarmInformation = _originFarmInformation;
         items[_upc].originFarmLatitude = _originFarmLatitude;
         items[_upc].originFarmLongitude = _originFarmLongitude;
-        items[_upc].productID = upc + sku
-
+        items[_upc].productID = upc + sku * upc;
+        items[_upc].productNotes = _productNotes;
+        items[_upc].itemState = State.Harvested;
     });
     // Increment sku
     sku = sku + 1;
     // Emit the appropriate event
 
-  }
+    emit Harvested(items[_upc].upc);
+
+    }
 
   // Define a function 'processtItem' that allows a farmer to mark an item 'Processed'
-  function processItem(uint _upc) public
+    function processItem(uint _upc) public
   // Call modifier to check if upc has passed previous supply chain stage
 
   // Call modifier to verify caller of this function
 
-  {
+    {
     // Update the appropriate fields
 
     // Emit the appropriate event
