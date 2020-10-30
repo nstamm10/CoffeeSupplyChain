@@ -1,8 +1,15 @@
 pragma solidity ^0.4.24;
 // Define a contract 'Supplychain'
-
+import "./FarmerRole.sol";
+import "./DistributorRole.sol";
+import "./RetailerRole.sol";
+import "./ConsumerRole.sol";
 
 contract SupplyChain {
+  using FarmerRole for FarmerRole.farmers;
+  using DistributorRole for DistributorRole.distributors;
+  using RetailersRole for RetailerRole.retailers;
+  using ConsumerRole for ConsumerRole.consumers;
 
 
   // Define 'owner'
@@ -155,8 +162,9 @@ contract SupplyChain {
   }
 
   // Define a function 'harvestItem' that allows a farmer to mark an item 'Harvested'
-    function harvestItem(uint _upc, address _originFarmerID, string _originFarmName, string _originFarmInformation, string  _originFarmLatitude, string  _originFarmLongitude, string  _productNotes) public
-    {
+    function harvestItem(uint _upc, address _originFarmerID, string _originFarmName, string _originFarmInformation,
+                          string  _originFarmLatitude, string  _originFarmLongitude, string  _productNotes) public {
+
     // Add the new item as part of Harvest
         items[_upc].sku = sku;
         items[_upc].upc = _upc;
@@ -173,7 +181,6 @@ contract SupplyChain {
     // Increment sku
     sku = sku + 1;
     // Emit the appropriate event
-
     emit Harvested(items[_upc].upc);
 
     }
@@ -181,7 +188,7 @@ contract SupplyChain {
   // Define a function 'processtItem' that allows a farmer to mark an item 'Processed'
     function processItem(uint _upc) public
   // Call modifier to check if upc has passed previous supply chain stage
-
+    
   // Call modifier to verify caller of this function
 
     {
