@@ -87,7 +87,7 @@ contract SupplyChain is FarmerRole, DistributorRole, RetailerRole, ConsumerRole 
     }
 
   // Define a modifier that checks the price and refunds the remaining balance
-    modifier checkValue(uint _upc, address buyer) {
+    modifier checkValue(uint _upc, address payable buyer) {
         _;
         uint _price = items[_upc].productPrice;
         uint amountToReturn = msg.value - _price;
