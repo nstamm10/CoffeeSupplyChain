@@ -199,9 +199,15 @@ contract SupplyChain is FarmerRole, DistributorRole, RetailerRole, ConsumerRole 
 
   {
     // Update the appropriate fields
+<<<<<<< HEAD
 
     // Emit the appropriate event
 
+=======
+      items[_upc].itemState = State.Packed;
+    // Emit the appropriate event
+      emit Packed(_upc);
+>>>>>>> 5660eb3c5f9fee6536ae21dc55700e410566b7b2
   }
 
   // Define a function 'sellItem' that allows a farmer to mark an item 'ForSale'
