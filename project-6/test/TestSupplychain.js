@@ -1,3 +1,7 @@
+//For tomorrow, figure out add farmer/distributor etc.
+// {from: etc} in tests
+//Finish test
+
 // This script is designed to test the solidity smart contract - SuppyChain.sol -- and the various functions within
 // Declare a variable and assign the compiled smart contract artifact
 var SupplyChain = artifacts.require('SupplyChain')
