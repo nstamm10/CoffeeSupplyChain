@@ -228,7 +228,7 @@ contract SupplyChain is FarmerRole, DistributorRole, RetailerRole, ConsumerRole 
     {
 
     // Update the appropriate fields - ownerID, distributorID, itemState
-        address payable seller = items[_upc].ownerID
+        address payable seller = items[_upc].ownerID;
         items[_upc].ownerID = msg.sender;
         items[_upc].distributorID = msg.sender;
         items[_upc].itemState = State.Sold;
