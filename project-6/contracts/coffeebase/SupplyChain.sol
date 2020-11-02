@@ -170,11 +170,10 @@ contract SupplyChain is FarmerRole, DistributorRole, RetailerRole, ConsumerRole 
         items[_upc].productID = upc + sku * upc;
         items[_upc].productNotes = _productNotes;
         items[_upc].itemState = State.Harvested;
-    });
     // Increment sku
-    sku = sku + 1;
+        sku = sku + 1;
     // Emit the appropriate event
-    emit Harvested(_upc);
+        emit Harvested(_upc);
 
     }
 
