@@ -83,11 +83,11 @@ contract SupplyChain is FarmerRole, DistributorRole, RetailerRole, ConsumerRole 
   }
 
   // Define a modifier that checks the price and refunds the remaining balance
-  modifier checkValue(uint _upc) {
+  modifier checkValue(uint _upc, address buyer) {
     _;
     uint _price = items[_upc].productPrice;
     uint amountToReturn = msg.value - _price;
-    items[_upc].consumerID.transfer(amountToReturn);
+    items[_upc].buyer.transfer(amountToReturn);
   }
 
   // Define a modifier that checks if an item.state of a upc is Harvested
@@ -201,32 +201,35 @@ contract SupplyChain is FarmerRole, DistributorRole, RetailerRole, ConsumerRole 
   // Define a function 'sellItem' that allows a farmer to mark an item 'ForSale'
   // Call modifier to check if upc has passed previous supply chain stage
   // Call modifier to verify caller of this function
-  function sellItem(uint _upc, uint _price) public onlyFarmer packed(_upc) {
+    function sellItem(uint _upc, uint _price) public onlyFarmer packed(_upc) {
     // Update the appropriate fields
-    items[_upc].itemState = State.ForSale;
+        items[_upc].itemState = State.ForSale;
+        items[_upc].productPrice = _price;
     // Emit the appropriate event
-    emit ForSale(_upc);
-  }
+        emit ForSale(_upc);
+    }
 
   // Define a function 'buyItem' that allows the disributor to mark an item 'Sold'
   // Use the above defined modifiers to check if the item is available for sale, if the buyer has paid enough,
   // and any excess ether sent is refunded back to the buyer
-  function buyItem(uint _upc) public payable
-    // Call modifier to check if upc has passed previous supply chain stage
-
-    // Call modifer to check if buyer has paid enough
-
-    // Call modifer to send any excess ether back to buyer
-
+  // Call modifier to check if upc has passed previous supply chain stage
+  // Call modifer to check if buyer has paid enough
+  // Call modifer to send any excess ether back to buyer
+    function buyItem(uint _upc) public payable
+        forSale(_upc) onlyDistributer
+        paidEnough(items[_upc].productPrice)
+        checkValue(_upc, msg.sender)
     {
 
     // Update the appropriate fields - ownerID, distributorID, itemState
-
+        items[_upc].ownderID = msg.sender;
+        items[_upc].distributorID = msg.sender;
+        items[_upc].itemState = State.Sold;
     // Transfer money to farmer
-
+        items[_upc].farmerID.transfer(items[_upc].productPrice);
     // emit the appropriate event
-
-  }
+        emit Sold(_upc);
+    }
 
   // Define a function 'shipItem' that allows the distributor to mark an item 'Shipped'
   // Use the above modifers to check if the item is sold
