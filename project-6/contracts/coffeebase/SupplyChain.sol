@@ -155,7 +155,7 @@ contract SupplyChain is FarmerRole, DistributorRole, RetailerRole, ConsumerRole 
 
   // Define a function 'harvestItem' that allows a farmer to mark an item 'Harvested'
     function harvestItem(uint _upc, address _originFarmerID, string _originFarmName, string _originFarmInformation,
-                          string  _originFarmLatitude, string  _originFarmLongitude, string  _productNotes) public {
+                          string  _originFarmLatitude, string  _originFarmLongitude, string  _productNotes) onlyFarmer public {
 
     // Add the new item as part of Harvest
         items[_upc].sku = sku;
@@ -182,7 +182,7 @@ contract SupplyChain is FarmerRole, DistributorRole, RetailerRole, ConsumerRole 
   // Call modifier to check if upc has passed previous supply chain stage
   harvested(_upc)
   // Call modifier to verify caller of this function
-  verifyCaller(items[_upc].originFarmerID)
+  onlyFarmer()
     {
     // Update the appropriate fields
     items[_upc].itemState = State.Processed;
