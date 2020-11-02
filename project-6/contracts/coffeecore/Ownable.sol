@@ -17,7 +17,7 @@ contract Ownable is SupplyChain {
     }
 
     /// Look up the address of the owner
-    function getOwner() public view returns (address) {
+    function getowner() public view returns (address) {
         return origOwner;
     }
 

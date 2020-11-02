@@ -91,7 +91,7 @@ contract SupplyChain is FarmerRole, DistributorRole, RetailerRole, ConsumerRole 
         _;
         uint _price = items[_upc].productPrice;
         uint amountToReturn = msg.value - _price;
-        items[_upc].buyer.transfer(amountToReturn);
+        buyer.transfer(amountToReturn);
     }
 
   // Define a modifier that checks if an item.state of a upc is Harvested
