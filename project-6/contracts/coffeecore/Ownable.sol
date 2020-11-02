@@ -1,6 +1,6 @@
 pragma solidity ^0.5.16;
 
-import "../coffeebase/SuppyChain.sol";
+import "../coffeebase/SupplyChain.sol";
 
 
 /// Provides basic authorization control
