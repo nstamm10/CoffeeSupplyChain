@@ -179,27 +179,20 @@ contract SupplyChain is FarmerRole, DistributorRole, RetailerRole, ConsumerRole 
     }
 
   // Define a function 'processtItem' that allows a farmer to mark an item 'Processed'
+    function processItem(uint _upc) public
   // Call modifier to check if upc has passed previous supply chain stage
+  harvested(_upc)
   // Call modifier to verify caller of this function
-  function processItem(uint _upc) public harvested(_upc) onlyFarmer {
+  onlyFarmer
+    {
     // Update the appropriate fields
-      items[_upc].itemState = State.Processed;
+    items[_upc].itemState = State.Processed;
     // Emit the appropriate event
-      emit Processed(_upc);
+    emit Processed(_upc);
   }
 
   // Define a function 'packItem' that allows a farmer to mark an item 'Packed'
-  // Call modifier to check if upc has passed previous supply chain stage
-  // Call modifier to verify caller of this function
-  function packItem(uint _upc) public processed(_upc) onlyFarmer {
-    // Update the appropriate fields
-    items[_upc].itemState = State.Packed;
-    // Emit the appropriate event
-    emit Packed(_upc);
-  }
-
-  // Define a function 'sellItem' that allows a farmer to mark an item 'ForSale'
-  function sellItem(uint _upc, uint _price) public
+  function packItem(uint _upc) public
   // Call modifier to check if upc has passed previous supply chain stage
 
   // Call modifier to verify caller of this function
@@ -209,6 +202,17 @@ contract SupplyChain is FarmerRole, DistributorRole, RetailerRole, ConsumerRole 
 
     // Emit the appropriate event
 
+  }
+
+  // Define a function 'sellItem' that allows a farmer to mark an item 'ForSale'
+  // Call modifier to check if upc has passed previous supply chain stage
+  // Call modifier to verify caller of this function
+  function sellItem(uint _upc, uint _price) public onlyFarmer packed(_upc) {
+
+    // Update the appropriate fields
+    items[_upc].itemState = State.ForSale;
+    // Emit the appropriate event
+    emit ForSale(_upc);
   }
 
   // Define a function 'buyItem' that allows the disributor to mark an item 'Sold'
