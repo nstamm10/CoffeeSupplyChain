@@ -110,7 +110,7 @@ contract SupplyChain is FarmerRole, DistributorRole, RetailerRole, ConsumerRole 
 
   // Define a modifier that checks if an item.state of a upc is ForSale
     modifier forSale(uint _upc) {
-        require(items[_upc].itemState == State.ForSale;
+        require(items[_upc].itemState == State.ForSale);
         _;
     }
 
