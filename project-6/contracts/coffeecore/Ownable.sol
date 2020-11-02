@@ -1,5 +1,8 @@
 pragma solidity ^0.5.16;
 
+import "../coffeebase/SuppyChain.sol";
+
+
 /// Provides basic authorization control
 contract Ownable is SupplyChain {
     address private origOwner;

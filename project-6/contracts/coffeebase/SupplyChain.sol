@@ -159,8 +159,10 @@ contract SupplyChain is FarmerRole, DistributorRole, RetailerRole, ConsumerRole 
     }
 
   // Define a function 'harvestItem' that allows a farmer to mark an item 'Harvested'
-    function harvestItem(uint _upc, address _originFarmerID, string _originFarmName, string _originFarmInformation,
-        string  _originFarmLatitude, string  _originFarmLongitude, string  _productNotes) public onlyFarmer {
+    function harvestItem(uint _upc, address _originFarmerID, string memory _originFarmName,
+        string memory _originFarmInformation,
+        string memory _originFarmLatitude, string memory _originFarmLongitude,
+        string memory _productNotes) public onlyFarmer {
 
 
     // Add the new item as part of Harvest
@@ -279,10 +281,10 @@ contract SupplyChain is FarmerRole, DistributorRole, RetailerRole, ConsumerRole 
         uint itemUPC,
         address ownerID,
         address originFarmerID,
-        string originFarmName,
-        string originFarmInformation,
-        string originFarmLatitude,
-        string originFarmLongitude
+        string memory originFarmName,
+        string memory originFarmInformation,
+        string memory originFarmLatitude,
+        string memory originFarmLongitude
     )
     {
   // Assign values to the 8 parameters
@@ -314,7 +316,7 @@ contract SupplyChain is FarmerRole, DistributorRole, RetailerRole, ConsumerRole 
         uint itemSKU,
         uint itemUPC,
         uint productID,
-        string productNotes,
+        string memory productNotes,
         uint productPrice,
         uint itemState,
         address distributorID,
