@@ -10,7 +10,7 @@ contract SupplyChain is FarmerRole, DistributorRole, RetailerRole, ConsumerRole 
 
 
   // Define 'owner'
-    address owner;
+    address payable owner;
 
   // Define a variable called 'upc' for Universal Product Code (UPC)
     uint  upc;
@@ -295,8 +295,8 @@ contract SupplyChain is FarmerRole, DistributorRole, RetailerRole, ConsumerRole 
         originFarmerID = items[_upc].originFarmerID;
         originFarmName = items[_upc].originFarmName;
         originFarmInformation = items[_upc].originFarmInformation;
-        originFarmLatitude = items[_upc]._originFarmLatitude;
-        originFarmLongitude = items[_upc]._originFarmLongitude;
+        originFarmLatitude = items[_upc].originFarmLatitude;
+        originFarmLongitude = items[_upc].originFarmLongitude;
 
         return
     (
