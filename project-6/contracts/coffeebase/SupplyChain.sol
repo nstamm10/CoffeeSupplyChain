@@ -236,9 +236,9 @@ contract SupplyChain is FarmerRole, DistributorRole, RetailerRole, ConsumerRole 
   // Call modifier to verify caller of this function
     function shipItem(uint _upc) public sold(_upc) verifyCaller(items[_upc].distributorID) {
     // Update the appropriate fields
-
+      items[_upc].itemState = State.Shipped;
     // Emit the appropriate event
-
+      emit Shipped(_upc);
     }
 
   // Define a function 'receiveItem' that allows the retailer to mark an item 'Received'
