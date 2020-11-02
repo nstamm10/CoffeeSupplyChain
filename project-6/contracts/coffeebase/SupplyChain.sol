@@ -1,6 +1,10 @@
 pragma solidity ^0.5.16;
 // Define a contract 'Supplychain'
 
+import "../coffeeaccesscontrol/FarmerRole.sol";
+import "../coffeeaccesscontrol/DistributorRole.sol";
+import "../coffeeaccesscontrol/ConsumerRole.sol";
+import "../coffeeaccesscontrol/RetailerRole.sol";
 
 contract SupplyChain is FarmerRole, DistributorRole, RetailerRole, ConsumerRole {
 
