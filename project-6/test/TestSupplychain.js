@@ -22,7 +22,7 @@ contract('SupplyChain', function(accounts) {
     const consumerID = accounts[4]
     const emptyAddress = '0x00000000000000000000000000000000000000'
 
-    ///Available Accounts
+    ///Available Account
     ///==================
     ///(0) 0x27d8d15cbc94527cadf5ec14b69519ae23288b95
     ///(1) 0x018c2dabef4904ecbd7118350a0c54dbeae3549a
