@@ -91,12 +91,11 @@ contract('SupplyChain', function(accounts) {
         await supplyChain.processItem(upc);
 
         // Retrieve the just now saved item from blockchain by calling function fetchItem()
-        const resultBufferOne = await supplyChain.fetchItemBufferOne.call(upc)
         const resultBufferTwo = await supplyChain.fetchItemBufferTwo.call(upc)
 
         // Verify the result set
         assert.equal(resultBufferTwo[5], 1, 'Error: Invalid item State')
-        assert.equal(eventEmitted, true, 'Invalid event emitted')        
+        assert.equal(eventEmitted, true, 'Invalid event emitted')
     })
 
     // 3rd Test

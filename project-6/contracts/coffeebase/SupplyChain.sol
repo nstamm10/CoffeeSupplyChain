@@ -158,6 +158,7 @@ contract SupplyChain is FarmerRole, DistributorRole, RetailerRole, ConsumerRole 
     function harvestItem(uint _upc, address _originFarmerID, string _originFarmName, string _originFarmInformation,
         string  _originFarmLatitude, string  _originFarmLongitude, string  _productNotes) public onlyFarmer {
 
+
     // Add the new item as part of Harvest
         items[_upc].sku = sku;
         items[_upc].upc = _upc;
