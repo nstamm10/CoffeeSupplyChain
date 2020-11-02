@@ -190,12 +190,12 @@ contract SupplyChain is FarmerRole, DistributorRole, RetailerRole, ConsumerRole 
   // Define a function 'packItem' that allows a farmer to mark an item 'Packed'
   // Call modifier to check if upc has passed previous supply chain stage
   // Call modifier to verify caller of this function
-  function packItem(uint _upc) public processed(_upc) verifyCaller(items[_upc].originFarmerID) {
+    function packItem(uint _upc) public processed(_upc) verifyCaller(items[_upc].originFarmerID) {
     // Update the appropriate fields
-      items[_upc].itemState = State.Packed;
+        items[_upc].itemState = State.Packed;
     // Emit the appropriate event
-      emit Packed(_upc);
-  }
+        emit Packed(_upc);
+    }
 
   // Define a function 'sellItem' that allows a farmer to mark an item 'ForSale'
   // Call modifier to check if upc has passed previous supply chain stage
@@ -234,12 +234,12 @@ contract SupplyChain is FarmerRole, DistributorRole, RetailerRole, ConsumerRole 
   // Use the above modifers to check if the item is sold
   // Call modifier to check if upc has passed previous supply chain stage
   // Call modifier to verify caller of this function
-  function shipItem(uint _upc) public sold(_upc) verifyCaller(items[_upc].distributorID) {
+    function shipItem(uint _upc) public sold(_upc) verifyCaller(items[_upc].distributorID) {
     // Update the appropriate fields
 
     // Emit the appropriate event
 
-  }
+    }
 
   // Define a function 'receiveItem' that allows the retailer to mark an item 'Received'
   // Use the above modifiers to check if the item is shipped
