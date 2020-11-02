@@ -193,9 +193,9 @@ contract SupplyChain is FarmerRole, DistributorRole, RetailerRole, ConsumerRole 
   // Call modifier to verify caller of this function
   function packItem(uint _upc) public processed(_upc) onlyFarmer {
     // Update the appropriate fields
-    items[_upc].itemState = State.Packed;
+      items[_upc].itemState = State.Packed;
     // Emit the appropriate event
-    emit Packed(_upc);
+      emit Packed(_upc);
   }
 
   // Define a function 'sellItem' that allows a farmer to mark an item 'ForSale'
