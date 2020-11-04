@@ -111,7 +111,7 @@ contract('SupplyChain', function(accounts) {
         const supplyChain = await SupplyChain.deployed()
 
         // Mark an item as ForSale by calling function sellItem()
-        let sale = supplyChain.sellItem(upc, productPrice, {from: accounts[1]});
+        let sale = await supplyChain.sellItem(upc, productPrice, {from: accounts[1]});
 
         // Retrieve the just now saved item from blockchain by calling function fetchItem()
         const resultBufferTwo = await supplyChain.fetchItemBufferTwo.call(upc);
@@ -162,19 +162,15 @@ contract('SupplyChain', function(accounts) {
     it("Testing smart contract function shipItem() that allows a distributor to ship coffee", async() => {
         const supplyChain = await SupplyChain.deployed()
 
-        // Declare and Initialize a variable for event
-
-
-        // Watch the emitted event Shipped()
-
-
         // Mark an item as Sold by calling function buyItem()
-
+        let ship = supplyChain.shipItem(upc, {from: accounts[2]});
 
         // Retrieve the just now saved item from blockchain by calling function fetchItem()
-
+        const resultBufferTwo = await supplyChain.fetchItemBufferTwo.call(upc);
 
         // Verify the result set
+        assert.equal(resultBufferTwo[5], 5, 'Error: Invalid item State');
+        TruffleAssert.eventEmitted(ship, 'Shipped');
 
     })
 
