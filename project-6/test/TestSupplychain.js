@@ -51,7 +51,6 @@ contract('SupplyChain', function(accounts) {
     it("Testing smart contract function harvestItem() that allows a farmer to harvest coffee", async() => {
         const supplyChain = await SupplyChain.deployed()
         await supplyChain.addFarmer(accounts[1]);
-
         // Declare and Initialize a variable for event
         // Watch the emitted event Harvested()
         //var event = supplyChain.Harvested()
@@ -62,9 +61,7 @@ contract('SupplyChain', function(accounts) {
         // Mark an item as Harvested by calling function harvestItem()
 
         let harvest = await supplyChain.harvestItem(upc, originFarmerID, originFarmName, originFarmInformation, originFarmLatitude, originFarmLongitude, productNotes, {from: accounts[1]});
-        TruffleAssert.eventEmitted(harvest, 'Harvested', (event) => {
-            return ev.param1 === 10 && ev.param2 === farmerAddress;
-        });
+
         // Retrieve the just now saved item from blockchain by calling function fetchItem()
         const resultBufferOne = await supplyChain.fetchItemBufferOne.call(upc)
         const resultBufferTwo = await supplyChain.fetchItemBufferTwo.call(upc)
@@ -79,24 +76,16 @@ contract('SupplyChain', function(accounts) {
         assert.equal(resultBufferOne[6], originFarmLatitude, 'Error: Missing or Invalid originFarmLatitude')
         assert.equal(resultBufferOne[7], originFarmLongitude, 'Error: Missing or Invalid originFarmLongitude')
         assert.equal(resultBufferTwo[5], 0, 'Error: Invalid item State')
-        assert.equal(eventEmitted, true, 'Invalid event emitted')
+        TruffleAssert.eventEmitted(harvest, 'Harvested');
     })
 
     // 2nd Test
     it("Testing smart contract function processItem() that allows a farmer to process coffee", async() => {
         const supplyChain = await SupplyChain.deployed()
 
-        // Declare and Initialize a variable for event
-        let eventEmitted = false;
-
-        // Watch the emitted event Processed()
-        let event = supplyChain.Processed();
-        await event.watch((err, res) => {
-          eventEmitted = true;
-        })
 
         // Mark an item as Processed by calling function processItem()
-        await supplyChain.processItem(upc);
+        await supplyChain.processItem(upc, {from: accounts[1]});
 
         // Retrieve the just now saved item from blockchain by calling function fetchItem()
         const resultBufferTwo = await supplyChain.fetchItemBufferTwo.call(upc)
