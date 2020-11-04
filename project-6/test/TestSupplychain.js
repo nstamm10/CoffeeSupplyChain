@@ -120,13 +120,15 @@ contract('SupplyChain', function(accounts) {
 
 
         // Mark an item as ForSale by calling function sellItem()
-
+        let sale = supplyChain.sellItem(upc, productPrice, {from: accounts[1]});
 
         // Retrieve the just now saved item from blockchain by calling function fetchItem()
-
+        const resultBufferTwo = await supplyChain.fetchItemBufferTwo.call(upc);
 
         // Verify the result set
-
+        assert.equal(resultBufferTwo[5], 3, 'Error: Invalid item State');
+        assert.equal(resultBufferTwo[4], productPrice, 'Error: Invalid item price');
+        TruffleAssert.eventEmitted(sale, 'ForSale');
     })
 
     // 5th Test
