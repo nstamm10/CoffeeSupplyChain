@@ -78,16 +78,15 @@ contract('SupplyChain', function(accounts) {
     it("Testing smart contract function processItem() that allows a farmer to process coffee", async() => {
         const supplyChain = await SupplyChain.deployed()
 
-
         // Mark an item as Processed by calling function processItem()
-        await supplyChain.processItem(upc, {from: accounts[1]});
+        let process = await supplyChain.processItem(upc, {from: accounts[1]});
 
         // Retrieve the just now saved item from blockchain by calling function fetchItem()
         const resultBufferTwo = await supplyChain.fetchItemBufferTwo.call(upc)
 
         // Verify the result set
         assert.equal(resultBufferTwo[5], 1, 'Error: Invalid item State')
-        assert.equal(eventEmitted, true, 'Invalid event emitted')
+        TruffleAssert.eventEmitted(process, 'Processed');
     })
 
     // 3rd Test
