@@ -20,7 +20,7 @@ contract('SupplyChain', function(accounts) {
     const originFarmLongitude = "144.341490"
     var productID = sku + upc
     const productNotes = "Best beans for Espresso"
-    const productPrice = Web3_Utils.toWei("1", "ether")
+    const productPrice = Web3_Utils.toWei("0.01", "ether")
     var itemState = 0
     const distributorID = accounts[2]
     const retailerID = accounts[3]
@@ -129,15 +129,13 @@ contract('SupplyChain', function(accounts) {
         //Add accounts 2 to a Distributor Role
         await supplyChain.addDistributor(accounts[2]);
 
-        //check buyerbalance before puchase is made
-        let buyerBalance1 = await web3.eth.getBalance(accounts[2]);
+        //check sellerBalance before puchase is made
         let sellerBalance1 = await web3.eth.getBalance(accounts[1]);
 
         // Mark an item as Sold by calling function buyItem()
-        let buy = await supplyChain.buyItem(upc, {from: accounts[2]});
+        let buy = await supplyChain.buyItem(upc, {from: accounts[2], value: Web3_Utils.toWei("1", "ether")});
 
         //check buyerbalance before puchase is made
-        let buyerBalance2 = await web3.eth.getBalance(accounts[2]);
         let sellerBalance2 = await web3.eth.getBalance(accounts[1]);
 
 
@@ -152,8 +150,7 @@ contract('SupplyChain', function(accounts) {
         TruffleAssert.eventEmitted(buy, 'Sold');
 
         //check the money now in sellers accounts
-        assert.equal(buyerBalance1, buyerBalance2 + productPrice, 'Error: Funds Transfered Incorrectly');
-        assert.equal(sellerBalance1 + productPrice, sellerBalance2, 'Error: Funds Transfered Incorrectly');
+        assert.equal(Number(sellerBalance1) + Number(productPrice), sellerBalance2, 'Error: Funds Transfered Incorrectly');
         //check the surplus money has been returned to the distributor
 
     })
@@ -163,7 +160,7 @@ contract('SupplyChain', function(accounts) {
         const supplyChain = await SupplyChain.deployed()
 
         // Mark an item as Sold by calling function buyItem()
-        let ship = supplyChain.shipItem(upc, {from: accounts[2]});
+        let ship = await supplyChain.shipItem(upc, {from: accounts[2]});
 
         // Retrieve the just now saved item from blockchain by calling function fetchItem()
         const resultBufferTwo = await supplyChain.fetchItemBufferTwo.call(upc);
@@ -178,39 +175,45 @@ contract('SupplyChain', function(accounts) {
     it("Testing smart contract function receiveItem() that allows a retailer to mark coffee received", async() => {
         const supplyChain = await SupplyChain.deployed()
 
-        // Declare and Initialize a variable for event
-
-
-        // Watch the emitted event Received()
-
+        //Add accounts 3 to a Retailer Role
+        await supplyChain.addRetailer(accounts[3]);
 
         // Mark an item as Sold by calling function buyItem()
-
+        let receive = await supplyChain.receiveItem(upc, {from: accounts[3]});
 
         // Retrieve the just now saved item from blockchain by calling function fetchItem()
-
+        const resultBufferOne = await supplyChain.fetchItemBufferOne.call(upc);
+        const resultBufferTwo = await supplyChain.fetchItemBufferTwo.call(upc);
 
         // Verify the result set
-
+        assert.equal(resultBufferOne[2], accounts[3], 'Error: Missing or Invalid ownerID')
+        assert.equal(resultBufferTwo[5], 6, 'Error: Invalid item State');
+        assert.equal(resultBufferTwo[7], accounts[3], 'Error: Missing or Invalid RetailerID');
+        TruffleAssert.eventEmitted(receive, 'Received');
     })
 
     // 8th Test
     it("Testing smart contract function purchaseItem() that allows a consumer to purchase coffee", async() => {
-        const supplyChain = await SupplyChain.deployed()
+        const supplyChain = await SupplyChain.deployed();
 
-        // Declare and Initialize a variable for event
+        //Add accounts 4 to a Consumer Role
+        await supplyChain.addConsumer(accounts[4]);
 
-
-        // Watch the emitted event Purchased()
-
-
+        console.log(await supplyChain.isConsumer(accounts[0]));
+        console.log(await supplyChain.isRetailer(accounts[3]));
         // Mark an item as Sold by calling function buyItem()
+        let purchase = await supplyChain.purchaseItem(upc, {from: accounts[0]});
 
 
         // Retrieve the just now saved item from blockchain by calling function fetchItem()
-
+        const resultBufferOne = await supplyChain.fetchItemBufferOne.call(upc);
+        const resultBufferTwo = await supplyChain.fetchItemBufferTwo.call(upc);
 
         // Verify the result set
+        assert.equal(resultBufferOne[2], accounts[4], 'Error: Missing or Invalid ownerID')
+        assert.equal(resultBufferTwo[5], 7, 'Error: Invalid item State');
+        assert.equal(resultBufferTwo[8], accounts[4], 'Error: Missing or Invalid ConsumerRole');
+        TruffleAssert.eventEmitted(purchase, 'Purchased');
 
     })
 
