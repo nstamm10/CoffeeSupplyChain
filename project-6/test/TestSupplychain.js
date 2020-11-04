@@ -126,21 +126,35 @@ contract('SupplyChain', function(accounts) {
     it("Testing smart contract function buyItem() that allows a distributor to buy coffee", async() => {
         const supplyChain = await SupplyChain.deployed()
 
-        // Declare and Initialize a variable for event
-        //Add accounts 1 to a Farmer Role
-        await supplyChain.addFarmer(accounts[1]);
+        //Add accounts 2 to a Distributor Role
+        await supplyChain.addDistributor(accounts[2]);
 
-        // Watch the emitted event Sold()
-        var event = supplyChain.Sold()
-
+        //check buyerbalance before puchase is made
+        let buyerBalance1 = await web3.eth.getBalance(accounts[2]);
+        let sellerBalance1 = await web3.eth.getBalance(accounts[1]);
 
         // Mark an item as Sold by calling function buyItem()
+        let buy = await supplyChain.buyItem(upc, {from: accounts[2]});
+
+        //check buyerbalance before puchase is made
+        let buyerBalance2 = await web3.eth.getBalance(accounts[2]);
+        let sellerBalance2 = await web3.eth.getBalance(accounts[1]);
 
 
         // Retrieve the just now saved item from blockchain by calling function fetchItem()
-
+        const resultBufferOne = await supplyChain.fetchItemBufferOne.call(upc);
+        const resultBufferTwo = await supplyChain.fetchItemBufferTwo.call(upc);
 
         // Verify the result set
+        assert.equal(resultBufferOne[2], accounts[2], 'Error: Missing or Invalid ownerID')
+        assert.equal(resultBufferTwo[5], 4, 'Error: Invalid item State');
+        assert.equal(resultBufferTwo[6], accounts[2], 'Error: Missing or Invalid DistributorID');
+        TruffleAssert.eventEmitted(buy, 'Sold');
+
+        //check the money now in sellers accounts
+        assert.equal(buyerBalance1, buyerBalance2 + productPrice, 'Error: Funds Transfered Incorrectly');
+        assert.equal(sellerBalance1 + productPrice, sellerBalance2, 'Error: Funds Transfered Incorrectly');
+        //check the surplus money has been returned to the distributor
 
     })
 
