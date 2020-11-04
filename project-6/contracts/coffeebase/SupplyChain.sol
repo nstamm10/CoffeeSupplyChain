@@ -6,6 +6,7 @@ import "../coffeeaccesscontrol/DistributorRole.sol";
 import "../coffeeaccesscontrol/ConsumerRole.sol";
 import "../coffeeaccesscontrol/RetailerRole.sol";
 
+
 contract SupplyChain is FarmerRole, DistributorRole, RetailerRole, ConsumerRole {
 
 
