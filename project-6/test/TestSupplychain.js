@@ -110,12 +110,6 @@ contract('SupplyChain', function(accounts) {
     it("Testing smart contract function sellItem() that allows a farmer to sell coffee", async() => {
         const supplyChain = await SupplyChain.deployed()
 
-        // Declare and Initialize a variable for event
-
-
-        // Watch the emitted event ForSale()
-
-
         // Mark an item as ForSale by calling function sellItem()
         let sale = supplyChain.sellItem(upc, productPrice, {from: accounts[1]});
 
