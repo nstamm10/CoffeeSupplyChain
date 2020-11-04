@@ -76,36 +76,33 @@ contract('SupplyChain', function(accounts) {
 
     // 2nd Test
     it("Testing smart contract function processItem() that allows a farmer to process coffee", async() => {
-        const supplyChain = await SupplyChain.deployed()
+        const supplyChain = await SupplyChain.deployed();
 
         // Mark an item as Processed by calling function processItem()
         let process = await supplyChain.processItem(upc, {from: accounts[1]});
 
         // Retrieve the just now saved item from blockchain by calling function fetchItem()
-        const resultBufferTwo = await supplyChain.fetchItemBufferTwo.call(upc)
+        const resultBufferTwo = await supplyChain.fetchItemBufferTwo.call(upc);
 
         // Verify the result set
-        assert.equal(resultBufferTwo[5], 1, 'Error: Invalid item State')
+        assert.equal(resultBufferTwo[5], 1, 'Error: Invalid item State');
         TruffleAssert.eventEmitted(process, 'Processed');
     })
 
     // 3rd Test
     it("Testing smart contract function packItem() that allows a farmer to pack coffee", async() => {
-        const supplyChain = await SupplyChain.deployed()
-
-        // Declare and Initialize a variable for event
-
-
-        // Watch the emitted event Packed()
-
+        const supplyChain = await SupplyChain.deployed();
 
         // Mark an item as Packed by calling function packItem()
+        let pack = await supplyChain.packItem(upc, {from: accounts[1]});
 
 
         // Retrieve the just now saved item from blockchain by calling function fetchItem()
-
+        const resultBufferTwo = await supplyChain.fetchItemBufferTwo.call(upc);
 
         // Verify the result set
+        assert.equal(resultBufferTwo[5], 2, 'Error: Invalid item State');
+        TruffleAssert.eventEmitted(pack, 'Packed');
 
     })
 
@@ -136,7 +133,8 @@ contract('SupplyChain', function(accounts) {
         const supplyChain = await SupplyChain.deployed()
 
         // Declare and Initialize a variable for event
-
+        //Add accounts 1 to a Farmer Role
+        await supplyChain.addFarmer(accounts[1]);
 
         // Watch the emitted event Sold()
         var event = supplyChain.Sold()
