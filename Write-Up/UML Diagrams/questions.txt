@@ -3,3 +3,5 @@ I am not completely sure if I represented this project correctly with these diag
 
 SupplyChain.sol is FarmerRole .... etc - where does SupplyChain.sol use fuctionality
 from the inherited contracts
+
+SupplyChain.sol contract address: 0x8b4a351f270e2b0ee223B278eBB8567A8577134F
