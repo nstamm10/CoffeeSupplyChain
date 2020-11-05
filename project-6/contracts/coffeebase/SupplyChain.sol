@@ -148,7 +148,7 @@ contract SupplyChain is FarmerRole, DistributorRole, RetailerRole, ConsumerRole 
   // and set 'upc' to 1
     constructor() public payable {
         owner = msg.sender;
-        //addFarmer(0x8Ee52FfEb068188dB80Bf1F2Dc95223C15dC5d2b);
+        addFarmer(0xa74E7562F76c80bd7BdA5D9f1Dff0Cf5FA2301fD);
       //  addDistributor(0x17d38EfD897775350c2Fd53A72c0413EBc5dd136);
       //  addRetailer(0xa0F5EAD259B0dc852583905147c211E26f22b608);
       //  addConsumer(0xD5556d18815b53076DE26aB62adaA6C5F9f2CAA8);
