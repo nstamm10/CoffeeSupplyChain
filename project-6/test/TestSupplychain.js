@@ -197,22 +197,19 @@ contract('SupplyChain', function(accounts) {
         const supplyChain = await SupplyChain.deployed();
 
         //Add accounts 4 to a Consumer Role
-        await supplyChain.addConsumer(accounts[4]);
+        await supplyChain.addConsumer(accounts[5]);
 
-        console.log(await supplyChain.isConsumer(accounts[0]));
-        console.log(await supplyChain.isRetailer(accounts[3]));
         // Mark an item as Sold by calling function buyItem()
-        let purchase = await supplyChain.purchaseItem(upc, {from: accounts[0]});
-
+        let purchase = await supplyChain.purchaseItem(upc, {from: accounts[5]});
 
         // Retrieve the just now saved item from blockchain by calling function fetchItem()
         const resultBufferOne = await supplyChain.fetchItemBufferOne.call(upc);
         const resultBufferTwo = await supplyChain.fetchItemBufferTwo.call(upc);
 
         // Verify the result set
-        assert.equal(resultBufferOne[2], accounts[4], 'Error: Missing or Invalid ownerID')
+        assert.equal(resultBufferOne[2], accounts[5], 'Error: Missing or Invalid ownerID')
         assert.equal(resultBufferTwo[5], 7, 'Error: Invalid item State');
-        assert.equal(resultBufferTwo[8], accounts[4], 'Error: Missing or Invalid ConsumerRole');
+        assert.equal(resultBufferTwo[8], accounts[5], 'Error: Missing or Invalid ConsumerRole');
         TruffleAssert.eventEmitted(purchase, 'Purchased');
 
     })
