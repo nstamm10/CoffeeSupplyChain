@@ -79,15 +79,15 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"FarmerAdded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"FarmerRemoved\",\"type\":\"event\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"addFarmer\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"isFarmer\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"renounceFarmer\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/bls24/OneDrive/Documents/GitHub/CoffeeSupplyChain/project-6/contracts/coffeeaccesscontrol/FarmerRole.sol\":\"FarmerRole\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/bls24/OneDrive/Documents/GitHub/CoffeeSupplyChain/project-6/contracts/coffeeaccesscontrol/FarmerRole.sol\":{\"keccak256\":\"0xef61302cecab46170c46fdd285c8582c5da6d4a9bedfd09848de6a3e7d6113e3\",\"urls\":[\"bzz-raw://532eae81f14ef98eaa5c746a36f123dfcde516cff5587da1f153a68c5fe1fa34\",\"dweb:/ipfs/Qma9FQKU6ntg9XgTGfZJWWuVyvCZkavsaMWQYW168p5Gfk\"]},\"/C/Users/bls24/OneDrive/Documents/GitHub/CoffeeSupplyChain/project-6/contracts/coffeeaccesscontrol/Roles.sol\":{\"keccak256\":\"0x612c094ad92de066dc16d35a873747c3ceb592aeda4283206afaa6e2cd1382d2\",\"urls\":[\"bzz-raw://939b5fad3216b5d8ddaf8df133ebc98e4149ca0e5742f88d212d956a2ac2fb2d\",\"dweb:/ipfs/QmfLbU7PCjBY3e8Lvhazov7jFNWFroVZPH5UbWNWdpU54K\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b506100203361002560201b60201c565b6101d9565b6100348161003760201b60201c565b50565b61004f81600061009560201b61026a1790919060201c565b8073ffffffffffffffffffffffffffffffffffffffff167f2e0ded4123377a3c2bc9a26f1717655a129e2f20752924d42e730ec89c83dbd060405160405180910390a250565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614156100cf57600080fd5b6100df828261014760201b60201c565b156100e957600080fd5b60018260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083151502179055505050565b60008073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff16141561018257600080fd5b8260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16905092915050565b6103f6806101e86000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c806380c3f96d1461004657806380fc0ce41461008a578063b942906914610094575b600080fd5b6100886004803603602081101561005c57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506100f0565b005b6100926100fc565b005b6100d6600480360360208110156100aa57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610107565b604051808215151515815260200191505060405180910390f35b6100f981610124565b50565b6101053361017e565b565b600061011d8260006101d890919063ffffffff16565b9050919050565b61013881600061026a90919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167f2e0ded4123377a3c2bc9a26f1717655a129e2f20752924d42e730ec89c83dbd060405160405180910390a250565b61019281600061031690919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167fa5e0f060af304ab17dd418c7927e3da3ae7868189bf387aee09ab179ccc572f260405160405180910390a250565b60008073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff16141561021357600080fd5b8260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16905092915050565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614156102a457600080fd5b6102ae82826101d8565b156102b857600080fd5b60018260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083151502179055505050565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16141561035057600080fd5b61035a82826101d8565b61036357600080fd5b60008260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff021916908315150217905550505056fea265627a7a72315820ba0672d208a600a81f92ef28549e9740e9b0ed140934daf8096f262bbf63d9fc64736f6c63430005100032",
-  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c806380c3f96d1461004657806380fc0ce41461008a578063b942906914610094575b600080fd5b6100886004803603602081101561005c57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506100f0565b005b6100926100fc565b005b6100d6600480360360208110156100aa57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610107565b604051808215151515815260200191505060405180910390f35b6100f981610124565b50565b6101053361017e565b565b600061011d8260006101d890919063ffffffff16565b9050919050565b61013881600061026a90919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167f2e0ded4123377a3c2bc9a26f1717655a129e2f20752924d42e730ec89c83dbd060405160405180910390a250565b61019281600061031690919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167fa5e0f060af304ab17dd418c7927e3da3ae7868189bf387aee09ab179ccc572f260405160405180910390a250565b60008073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff16141561021357600080fd5b8260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16905092915050565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614156102a457600080fd5b6102ae82826101d8565b156102b857600080fd5b60018260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083151502179055505050565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16141561035057600080fd5b61035a82826101d8565b61036357600080fd5b60008260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff021916908315150217905550505056fea265627a7a72315820ba0672d208a600a81f92ef28549e9740e9b0ed140934daf8096f262bbf63d9fc64736f6c63430005100032",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"FarmerAdded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"FarmerRemoved\",\"type\":\"event\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"addFarmer\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"isFarmer\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"renounceFarmer\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/bls24/OneDrive/Documents/Github/CoffeeSupplyChain/project-6/contracts/coffeeaccesscontrol/FarmerRole.sol\":\"FarmerRole\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/bls24/OneDrive/Documents/Github/CoffeeSupplyChain/project-6/contracts/coffeeaccesscontrol/FarmerRole.sol\":{\"keccak256\":\"0xef61302cecab46170c46fdd285c8582c5da6d4a9bedfd09848de6a3e7d6113e3\",\"urls\":[\"bzz-raw://532eae81f14ef98eaa5c746a36f123dfcde516cff5587da1f153a68c5fe1fa34\",\"dweb:/ipfs/Qma9FQKU6ntg9XgTGfZJWWuVyvCZkavsaMWQYW168p5Gfk\"]},\"/C/Users/bls24/OneDrive/Documents/Github/CoffeeSupplyChain/project-6/contracts/coffeeaccesscontrol/Roles.sol\":{\"keccak256\":\"0x612c094ad92de066dc16d35a873747c3ceb592aeda4283206afaa6e2cd1382d2\",\"urls\":[\"bzz-raw://939b5fad3216b5d8ddaf8df133ebc98e4149ca0e5742f88d212d956a2ac2fb2d\",\"dweb:/ipfs/QmfLbU7PCjBY3e8Lvhazov7jFNWFroVZPH5UbWNWdpU54K\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506100203361002560201b60201c565b6101d9565b6100348161003760201b60201c565b50565b61004f81600061009560201b61026a1790919060201c565b8073ffffffffffffffffffffffffffffffffffffffff167f2e0ded4123377a3c2bc9a26f1717655a129e2f20752924d42e730ec89c83dbd060405160405180910390a250565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614156100cf57600080fd5b6100df828261014760201b60201c565b156100e957600080fd5b60018260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083151502179055505050565b60008073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff16141561018257600080fd5b8260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16905092915050565b6103f6806101e86000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c806380c3f96d1461004657806380fc0ce41461008a578063b942906914610094575b600080fd5b6100886004803603602081101561005c57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506100f0565b005b6100926100fc565b005b6100d6600480360360208110156100aa57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610107565b604051808215151515815260200191505060405180910390f35b6100f981610124565b50565b6101053361017e565b565b600061011d8260006101d890919063ffffffff16565b9050919050565b61013881600061026a90919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167f2e0ded4123377a3c2bc9a26f1717655a129e2f20752924d42e730ec89c83dbd060405160405180910390a250565b61019281600061031690919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167fa5e0f060af304ab17dd418c7927e3da3ae7868189bf387aee09ab179ccc572f260405160405180910390a250565b60008073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff16141561021357600080fd5b8260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16905092915050565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614156102a457600080fd5b6102ae82826101d8565b156102b857600080fd5b60018260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083151502179055505050565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16141561035057600080fd5b61035a82826101d8565b61036357600080fd5b60008260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff021916908315150217905550505056fea265627a7a72315820fc03c85f49ee43ffab137777abdc272baadabf44d3d34454ca87cf2bf9c28e0c64736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c806380c3f96d1461004657806380fc0ce41461008a578063b942906914610094575b600080fd5b6100886004803603602081101561005c57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506100f0565b005b6100926100fc565b005b6100d6600480360360208110156100aa57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610107565b604051808215151515815260200191505060405180910390f35b6100f981610124565b50565b6101053361017e565b565b600061011d8260006101d890919063ffffffff16565b9050919050565b61013881600061026a90919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167f2e0ded4123377a3c2bc9a26f1717655a129e2f20752924d42e730ec89c83dbd060405160405180910390a250565b61019281600061031690919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167fa5e0f060af304ab17dd418c7927e3da3ae7868189bf387aee09ab179ccc572f260405160405180910390a250565b60008073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff16141561021357600080fd5b8260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16905092915050565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614156102a457600080fd5b6102ae82826101d8565b156102b857600080fd5b60018260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083151502179055505050565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16141561035057600080fd5b61035a82826101d8565b61036357600080fd5b60008260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff021916908315150217905550505056fea265627a7a72315820fc03c85f49ee43ffab137777abdc272baadabf44d3d34454ca87cf2bf9c28e0c64736f6c63430005100032",
   "sourceMap": "162:1573:3:-;;;587:61;8:9:-1;5:2;;;30:1;27;20:12;5:2;587:61:3;619:21;629:10;619:9;;;:21;;:::i;:::-;162:1573;;1054:81;1108:19;1119:7;1108:10;;;:19;;:::i;:::-;1054:81;:::o;1378:121::-;1435:20;1447:7;1435;:11;;;;;;:20;;;;:::i;:::-;1483:7;1471:20;;;;;;;;;;;;1378:121;:::o;276:186:5:-;372:1;353:21;;:7;:21;;;;345:30;;;;;;395:18;399:4;405:7;395:3;;;:18;;:::i;:::-;394:19;386:28;;;;;;450:4;427;:11;;:20;439:7;427:20;;;;;;;;;;;;;;;;:27;;;;;;;;;;;;;;;;;;276:186;;:::o;810:165::-;882:4;926:1;907:21;;:7;:21;;;;899:30;;;;;;947:4;:11;;:20;959:7;947:20;;;;;;;;;;;;;;;;;;;;;;;;;940:27;;810:165;;;;:::o;162:1573:3:-;;;;;;;",
   "deployedSourceMap": "162:1573:3:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;162:1573:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1054:81;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1054:81:3;;;;;;;;;;;;;;;;;;;:::i;:::-;;1206:77;;;:::i;:::-;;882:108;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;882:108:3;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;1054:81;1108:19;1119:7;1108:10;:19::i;:::-;1054:81;:::o;1206:77::-;1250:25;1264:10;1250:13;:25::i;:::-;1206:77::o;882:108::-;938:4;962:20;974:7;962;:11;;:20;;;;:::i;:::-;955:27;;882:108;;;:::o;1378:121::-;1435:20;1447:7;1435;:11;;:20;;;;:::i;:::-;1483:7;1471:20;;;;;;;;;;;;1378:121;:::o;1603:129::-;1663:23;1678:7;1663;:14;;:23;;;;:::i;:::-;1716:7;1702:22;;;;;;;;;;;;1603:129;:::o;810:165:5:-;882:4;926:1;907:21;;:7;:21;;;;899:30;;;;;;947:4;:11;;:20;959:7;947:20;;;;;;;;;;;;;;;;;;;;;;;;;940:27;;810:165;;;;:::o;276:186::-;372:1;353:21;;:7;:21;;;;345:30;;;;;;395:18;399:4;405:7;395:3;:18::i;:::-;394:19;386:28;;;;;;450:4;427;:11;;:20;439:7;427:20;;;;;;;;;;;;;;;;:27;;;;;;;;;;;;;;;;;;276:186;;:::o;535:189::-;634:1;615:21;;:7;:21;;;;607:30;;;;;;656:18;660:4;666:7;656:3;:18::i;:::-;648:27;;;;;;711:5;688:4;:11;;:20;700:7;688:20;;;;;;;;;;;;;;;;:28;;;;;;;;;;;;;;;;;;535:189;;:::o",
   "source": "pragma solidity ^0.5.16;\r\n\r\n// Import the library 'Roles'\r\nimport \"./Roles.sol\";\r\n\r\n// Define a contract 'FarmerRole' to manage this role - add, remove, check\r\n\r\ncontract FarmerRole {\r\n    using Roles for Roles.Role;\r\n\r\n  // Define 2 events, one for Adding, and other for Removing\r\n    event FarmerAdded(address indexed account);\r\n    event FarmerRemoved(address indexed account);\r\n\r\n  // Define a struct 'farmers' by inheriting from 'Roles' library, struct Role\r\n    Roles.Role private farmers;\r\n\r\n  // In the constructor make the address that deploys this contract the 1st farmer\r\n    constructor() public {\r\n        addFarmer(msg.sender);\r\n    }\r\n\r\n  // Define a modifier that checks to see if msg.sender has the appropriate role\r\n    modifier onlyFarmer() {\r\n        require(isFarmer(msg.sender));\r\n        _;\r\n    }\r\n\r\n  // Define a function 'isFarmer' to check this role\r\n    function isFarmer(address account) public view returns (bool) {\r\n        return farmers.has(account);\r\n    }\r\n\r\n  // Define a function 'addFarmer' that adds this role\r\n    function addFarmer(address account) public {\r\n        _addFarmer(account);\r\n    }\r\n\r\n  // Define a function 'renounceFarmer' to renounce this role\r\n    function renounceFarmer() public {\r\n        _removeFarmer(msg.sender);\r\n    }\r\n\r\n  // Define an internal function '_addFarmer' to add this role, called by 'addFarmer'\r\n    function _addFarmer(address account) internal {\r\n        farmers.add(account);\r\n        emit FarmerAdded(account);\r\n    }\r\n\r\n  // Define an internal function '_removeFarmer' to remove this role, called by 'removeFarmer'\r\n    function _removeFarmer(address account) internal {\r\n        farmers.remove(account);\r\n        emit FarmerRemoved(account);\r\n    }\r\n}\r\n",
-  "sourcePath": "C:\\Users\\bls24\\OneDrive\\Documents\\GitHub\\CoffeeSupplyChain\\project-6\\contracts\\coffeeaccesscontrol\\FarmerRole.sol",
+  "sourcePath": "C:\\Users\\bls24\\OneDrive\\Documents\\Github\\CoffeeSupplyChain\\project-6\\contracts\\coffeeaccesscontrol\\FarmerRole.sol",
   "ast": {
-    "absolutePath": "/C/Users/bls24/OneDrive/Documents/GitHub/CoffeeSupplyChain/project-6/contracts/coffeeaccesscontrol/FarmerRole.sol",
+    "absolutePath": "/C/Users/bls24/OneDrive/Documents/Github/CoffeeSupplyChain/project-6/contracts/coffeeaccesscontrol/FarmerRole.sol",
     "exportedSymbols": {
       "FarmerRole": [
         359
@@ -108,7 +108,7 @@
         "src": "0:24:3"
       },
       {
-        "absolutePath": "/C/Users/bls24/OneDrive/Documents/GitHub/CoffeeSupplyChain/project-6/contracts/coffeeaccesscontrol/Roles.sol",
+        "absolutePath": "/C/Users/bls24/OneDrive/Documents/Github/CoffeeSupplyChain/project-6/contracts/coffeeaccesscontrol/Roles.sol",
         "file": "./Roles.sol",
         "id": 261,
         "nodeType": "ImportDirective",
@@ -292,7 +292,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1585,
+                          "referencedDeclaration": 1569,
                           "src": "629:3:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -398,7 +398,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1585,
+                              "referencedDeclaration": 1569,
                               "src": "788:3:3",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -464,10 +464,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1588,
-                        1589
+                        1572,
+                        1573
                       ],
-                      "referencedDeclaration": 1588,
+                      "referencedDeclaration": 1572,
                       "src": "771:7:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -804,7 +804,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1585,
+                          "referencedDeclaration": 1569,
                           "src": "1264:3:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -1267,7 +1267,7 @@
     "src": "0:1737:3"
   },
   "legacyAST": {
-    "absolutePath": "/C/Users/bls24/OneDrive/Documents/GitHub/CoffeeSupplyChain/project-6/contracts/coffeeaccesscontrol/FarmerRole.sol",
+    "absolutePath": "/C/Users/bls24/OneDrive/Documents/Github/CoffeeSupplyChain/project-6/contracts/coffeeaccesscontrol/FarmerRole.sol",
     "exportedSymbols": {
       "FarmerRole": [
         359
@@ -1288,7 +1288,7 @@
         "src": "0:24:3"
       },
       {
-        "absolutePath": "/C/Users/bls24/OneDrive/Documents/GitHub/CoffeeSupplyChain/project-6/contracts/coffeeaccesscontrol/Roles.sol",
+        "absolutePath": "/C/Users/bls24/OneDrive/Documents/Github/CoffeeSupplyChain/project-6/contracts/coffeeaccesscontrol/Roles.sol",
         "file": "./Roles.sol",
         "id": 261,
         "nodeType": "ImportDirective",
@@ -1472,7 +1472,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1585,
+                          "referencedDeclaration": 1569,
                           "src": "629:3:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -1578,7 +1578,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1585,
+                              "referencedDeclaration": 1569,
                               "src": "788:3:3",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -1644,10 +1644,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1588,
-                        1589
+                        1572,
+                        1573
                       ],
-                      "referencedDeclaration": 1588,
+                      "referencedDeclaration": 1572,
                       "src": "771:7:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1984,7 +1984,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1585,
+                          "referencedDeclaration": 1569,
                           "src": "1264:3:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -2481,8 +2481,8 @@
         }
       },
       "links": {},
-      "address": "0x4ACEB83C8dA87916c5BD8c61635C245CB3fee638",
-      "transactionHash": "0x61d8a2c088bb086662605d31539533772678a047078c58fa4660c5a3171524db"
+      "address": "0x7B97D0ED0578dA3a22f6d4a39767Bd6AE76444CE",
+      "transactionHash": "0xb4a21b5bcd3a2ffbf5a3798c0f81aec16dc704c45177319ca740c7840034f848"
     },
     "5777": {
       "events": {
@@ -2515,11 +2515,11 @@
       },
       "links": {},
       "address": "0x9008e9e3F84107feeD50751f16158713134DD4e9",
-      "transactionHash": "0x03844a2d89d7ac1552ae9a4f7d99b8efb6b9d534e68634cf9a84558a7dbdbecf"
+      "transactionHash": "0xbc1da42a9c92fa71dea4df85d2989e41c77815af0665436a4fac2437eaa09e0b"
     }
   },
   "schemaVersion": "3.2.5",
-  "updatedAt": "2020-11-05T14:26:26.010Z",
+  "updatedAt": "2020-11-05T23:40:15.489Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}

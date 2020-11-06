@@ -79,15 +79,15 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"DistributorAdded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"DistributorRemoved\",\"type\":\"event\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"addDistributor\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"isDistributor\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"renounceDistributor\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/bls24/OneDrive/Documents/GitHub/CoffeeSupplyChain/project-6/contracts/coffeeaccesscontrol/DistributorRole.sol\":\"DistributorRole\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/bls24/OneDrive/Documents/GitHub/CoffeeSupplyChain/project-6/contracts/coffeeaccesscontrol/DistributorRole.sol\":{\"keccak256\":\"0x7955470e4534a7f083648f5eae2683bdf944d2e71745b9fabab2e9466fda6acf\",\"urls\":[\"bzz-raw://92d55b649510b0b85beeb5917408cc0bd74976bc3cddffa9313680d45f47fd4c\",\"dweb:/ipfs/QmaunzHJ2vE7Ko9BQEFhYjKf5xaSUSpRbSk4JpDkHyfNLY\"]},\"/C/Users/bls24/OneDrive/Documents/GitHub/CoffeeSupplyChain/project-6/contracts/coffeeaccesscontrol/Roles.sol\":{\"keccak256\":\"0x612c094ad92de066dc16d35a873747c3ceb592aeda4283206afaa6e2cd1382d2\",\"urls\":[\"bzz-raw://939b5fad3216b5d8ddaf8df133ebc98e4149ca0e5742f88d212d956a2ac2fb2d\",\"dweb:/ipfs/QmfLbU7PCjBY3e8Lvhazov7jFNWFroVZPH5UbWNWdpU54K\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b506100203361002560201b60201c565b6101d9565b6100348161003760201b60201c565b50565b61004f81600061009560201b6103151790919060201c565b8073ffffffffffffffffffffffffffffffffffffffff167fddbf200aa634dc3fb81cfd68583dd1040d1c751d335e1d86b631bde3e977fea860405160405180910390a250565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614156100cf57600080fd5b6100df828261014760201b60201c565b156100e957600080fd5b60018260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083151502179055505050565b60008073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff16141561018257600080fd5b8260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16905092915050565b6103f6806101e86000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c8063644241db146100465780637250e224146100505780638f0c86fa14610094575b600080fd5b61004e6100f0565b005b6100926004803603602081101561006657600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506100fb565b005b6100d6600480360360208110156100aa57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610107565b604051808215151515815260200191505060405180910390f35b6100f933610124565b565b6101048161017e565b50565b600061011d8260006101d890919063ffffffff16565b9050919050565b61013881600061026a90919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167f126174f6cf49c81cdb4a9214c6b8f037bef55b4ec31e4fc776cea2a1c8a88d5960405160405180910390a250565b61019281600061031590919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167fddbf200aa634dc3fb81cfd68583dd1040d1c751d335e1d86b631bde3e977fea860405160405180910390a250565b60008073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff16141561021357600080fd5b8260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16905092915050565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614156102a457600080fd5b6102ae82826101d8565b6102b757600080fd5b60008260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083151502179055505050565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16141561034f57600080fd5b61035982826101d8565b1561036357600080fd5b60018260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff021916908315150217905550505056fea265627a7a723158202bbb078e85c72d2f2b112dda8dd60198fd72087872a6f3dcd03fdf757bad433564736f6c63430005100032",
-  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c8063644241db146100465780637250e224146100505780638f0c86fa14610094575b600080fd5b61004e6100f0565b005b6100926004803603602081101561006657600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506100fb565b005b6100d6600480360360208110156100aa57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610107565b604051808215151515815260200191505060405180910390f35b6100f933610124565b565b6101048161017e565b50565b600061011d8260006101d890919063ffffffff16565b9050919050565b61013881600061026a90919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167f126174f6cf49c81cdb4a9214c6b8f037bef55b4ec31e4fc776cea2a1c8a88d5960405160405180910390a250565b61019281600061031590919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167fddbf200aa634dc3fb81cfd68583dd1040d1c751d335e1d86b631bde3e977fea860405160405180910390a250565b60008073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff16141561021357600080fd5b8260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16905092915050565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614156102a457600080fd5b6102ae82826101d8565b6102b757600080fd5b60008260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083151502179055505050565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16141561034f57600080fd5b61035982826101d8565b1561036357600080fd5b60018260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff021916908315150217905550505056fea265627a7a723158202bbb078e85c72d2f2b112dda8dd60198fd72087872a6f3dcd03fdf757bad433564736f6c63430005100032",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"DistributorAdded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"DistributorRemoved\",\"type\":\"event\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"addDistributor\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"isDistributor\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"renounceDistributor\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/bls24/OneDrive/Documents/Github/CoffeeSupplyChain/project-6/contracts/coffeeaccesscontrol/DistributorRole.sol\":\"DistributorRole\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/bls24/OneDrive/Documents/Github/CoffeeSupplyChain/project-6/contracts/coffeeaccesscontrol/DistributorRole.sol\":{\"keccak256\":\"0x7955470e4534a7f083648f5eae2683bdf944d2e71745b9fabab2e9466fda6acf\",\"urls\":[\"bzz-raw://92d55b649510b0b85beeb5917408cc0bd74976bc3cddffa9313680d45f47fd4c\",\"dweb:/ipfs/QmaunzHJ2vE7Ko9BQEFhYjKf5xaSUSpRbSk4JpDkHyfNLY\"]},\"/C/Users/bls24/OneDrive/Documents/Github/CoffeeSupplyChain/project-6/contracts/coffeeaccesscontrol/Roles.sol\":{\"keccak256\":\"0x612c094ad92de066dc16d35a873747c3ceb592aeda4283206afaa6e2cd1382d2\",\"urls\":[\"bzz-raw://939b5fad3216b5d8ddaf8df133ebc98e4149ca0e5742f88d212d956a2ac2fb2d\",\"dweb:/ipfs/QmfLbU7PCjBY3e8Lvhazov7jFNWFroVZPH5UbWNWdpU54K\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506100203361002560201b60201c565b6101d9565b6100348161003760201b60201c565b50565b61004f81600061009560201b6103151790919060201c565b8073ffffffffffffffffffffffffffffffffffffffff167fddbf200aa634dc3fb81cfd68583dd1040d1c751d335e1d86b631bde3e977fea860405160405180910390a250565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614156100cf57600080fd5b6100df828261014760201b60201c565b156100e957600080fd5b60018260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083151502179055505050565b60008073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff16141561018257600080fd5b8260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16905092915050565b6103f6806101e86000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c8063644241db146100465780637250e224146100505780638f0c86fa14610094575b600080fd5b61004e6100f0565b005b6100926004803603602081101561006657600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506100fb565b005b6100d6600480360360208110156100aa57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610107565b604051808215151515815260200191505060405180910390f35b6100f933610124565b565b6101048161017e565b50565b600061011d8260006101d890919063ffffffff16565b9050919050565b61013881600061026a90919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167f126174f6cf49c81cdb4a9214c6b8f037bef55b4ec31e4fc776cea2a1c8a88d5960405160405180910390a250565b61019281600061031590919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167fddbf200aa634dc3fb81cfd68583dd1040d1c751d335e1d86b631bde3e977fea860405160405180910390a250565b60008073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff16141561021357600080fd5b8260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16905092915050565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614156102a457600080fd5b6102ae82826101d8565b6102b757600080fd5b60008260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083151502179055505050565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16141561034f57600080fd5b61035982826101d8565b1561036357600080fd5b60018260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff021916908315150217905550505056fea265627a7a723158200c2193df038d8e8d7a59d6122d6415392f9048a086852131f3c8d5fb9ac7770164736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c8063644241db146100465780637250e224146100505780638f0c86fa14610094575b600080fd5b61004e6100f0565b005b6100926004803603602081101561006657600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506100fb565b005b6100d6600480360360208110156100aa57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610107565b604051808215151515815260200191505060405180910390f35b6100f933610124565b565b6101048161017e565b50565b600061011d8260006101d890919063ffffffff16565b9050919050565b61013881600061026a90919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167f126174f6cf49c81cdb4a9214c6b8f037bef55b4ec31e4fc776cea2a1c8a88d5960405160405180910390a250565b61019281600061031590919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167fddbf200aa634dc3fb81cfd68583dd1040d1c751d335e1d86b631bde3e977fea860405160405180910390a250565b60008073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff16141561021357600080fd5b8260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16905092915050565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614156102a457600080fd5b6102ae82826101d8565b6102b757600080fd5b60008260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083151502179055505050565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16141561034f57600080fd5b61035982826101d8565b1561036357600080fd5b60018260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff021916908315150217905550505056fea265627a7a723158200c2193df038d8e8d7a59d6122d6415392f9048a086852131f3c8d5fb9ac7770164736f6c63430005100032",
   "sourceMap": "167:1713:2:-;;;622:66;8:9:-1;5:2;;;30:1;27;20:12;5:2;622:66:2;654:26;669:10;654:14;;;:26;;:::i;:::-;167:1713;;1124:91;1183:24;1199:7;1183:15;;;:24;;:::i;:::-;1124:91;:::o;1483:136::-;1545:25;1562:7;1545:12;:16;;;;;;:25;;;;:::i;:::-;1603:7;1586:25;;;;;;;;;;;;1483:136;:::o;276:186:5:-;372:1;353:21;;:7;:21;;;;345:30;;;;;;395:18;399:4;405:7;395:3;;;:18;;:::i;:::-;394:19;386:28;;;;;;450:4;427;:11;;:20;439:7;427:20;;;;;;;;;;;;;;;;:27;;;;;;;;;;;;;;;;;;276:186;;:::o;810:165::-;882:4;926:1;907:21;;:7;:21;;;;899:30;;;;;;947:4;:11;;:20;959:7;947:20;;;;;;;;;;;;;;;;;;;;;;;;;940:27;;810:165;;;;:::o;167:1713:2:-;;;;;;;",
   "deployedSourceMap": "167:1713:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;167:1713:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1291:87;;;:::i;:::-;;1124:91;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1124:91:2;;;;;;;;;;;;;;;;;;;:::i;:::-;;937:118;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;937:118:2;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;1291:87;1340:30;1359:10;1340:18;:30::i;:::-;1291:87::o;1124:91::-;1183:24;1199:7;1183:15;:24::i;:::-;1124:91;:::o;937:118::-;998:4;1022:25;1039:7;1022:12;:16;;:25;;;;:::i;:::-;1015:32;;937:118;;;:::o;1733:144::-;1798:28;1818:7;1798:12;:19;;:28;;;;:::i;:::-;1861:7;1842:27;;;;;;;;;;;;1733:144;:::o;1483:136::-;1545:25;1562:7;1545:12;:16;;:25;;;;:::i;:::-;1603:7;1586:25;;;;;;;;;;;;1483:136;:::o;810:165:5:-;882:4;926:1;907:21;;:7;:21;;;;899:30;;;;;;947:4;:11;;:20;959:7;947:20;;;;;;;;;;;;;;;;;;;;;;;;;940:27;;810:165;;;;:::o;535:189::-;634:1;615:21;;:7;:21;;;;607:30;;;;;;656:18;660:4;666:7;656:3;:18::i;:::-;648:27;;;;;;711:5;688:4;:11;;:20;700:7;688:20;;;;;;;;;;;;;;;;:28;;;;;;;;;;;;;;;;;;535:189;;:::o;276:186::-;372:1;353:21;;:7;:21;;;;345:30;;;;;;395:18;399:4;405:7;395:3;:18::i;:::-;394:19;386:28;;;;;;450:4;427;:11;;:20;439:7;427:20;;;;;;;;;;;;;;;;:27;;;;;;;;;;;;;;;;;;276:186;;:::o",
   "source": "pragma solidity ^0.5.16;\r\n\r\n// Import the library 'Roles'\r\nimport \"./Roles.sol\";\r\n\r\n// Define a contract 'DistributorRole' to manage this role - add, remove, check\r\n\r\ncontract DistributorRole {\r\n\r\n    using Roles for Roles.Role;\r\n  // Define 2 events, one for Adding, and other for Removing\r\n    event DistributorAdded(address indexed account);\r\n    event DistributorRemoved(address indexed account);\r\n\r\n  // Define a struct 'distributors' by inheriting from 'Roles' library, struct Role\r\n    Roles.Role private distributors;\r\n  // In the constructor make the address that deploys this contract the 1st distributor\r\n\r\n    constructor() public {\r\n        addDistributor(msg.sender);\r\n    }\r\n\r\n  // Define a modifier that checks to see if msg.sender has the appropriate role\r\n    modifier onlyDistributor() {\r\n        require(isDistributor(msg.sender));\r\n        _;\r\n    }\r\n\r\n  // Define a function 'isDistributor' to check this role\r\n    function isDistributor(address account) public view returns (bool) {\r\n        return distributors.has(account);\r\n    }\r\n\r\n  // Define a function 'addDistributor' that adds this role\r\n    function addDistributor(address account) public {\r\n        _addDistributor(account);\r\n    }\r\n\r\n  // Define a function 'renounceDistributor' to renounce this role\r\n    function renounceDistributor() public {\r\n        _removeDistributor(msg.sender);\r\n    }\r\n\r\n  // Define an internal function '_addDistributor' to add this role, called by 'addDistributor'\r\n    function _addDistributor(address account) internal {\r\n        distributors.add(account);\r\n        emit DistributorAdded(account);\r\n    }\r\n\r\n  // Define an internal function '_removeDistributor' to remove this role, called by 'removeDistributor'\r\n    function _removeDistributor(address account) internal {\r\n        distributors.remove(account);\r\n        emit DistributorRemoved(account);\r\n    }\r\n}\r\n",
-  "sourcePath": "C:\\Users\\bls24\\OneDrive\\Documents\\GitHub\\CoffeeSupplyChain\\project-6\\contracts\\coffeeaccesscontrol\\DistributorRole.sol",
+  "sourcePath": "C:\\Users\\bls24\\OneDrive\\Documents\\Github\\CoffeeSupplyChain\\project-6\\contracts\\coffeeaccesscontrol\\DistributorRole.sol",
   "ast": {
-    "absolutePath": "/C/Users/bls24/OneDrive/Documents/GitHub/CoffeeSupplyChain/project-6/contracts/coffeeaccesscontrol/DistributorRole.sol",
+    "absolutePath": "/C/Users/bls24/OneDrive/Documents/Github/CoffeeSupplyChain/project-6/contracts/coffeeaccesscontrol/DistributorRole.sol",
     "exportedSymbols": {
       "DistributorRole": [
         258
@@ -108,7 +108,7 @@
         "src": "0:24:2"
       },
       {
-        "absolutePath": "/C/Users/bls24/OneDrive/Documents/GitHub/CoffeeSupplyChain/project-6/contracts/coffeeaccesscontrol/Roles.sol",
+        "absolutePath": "/C/Users/bls24/OneDrive/Documents/Github/CoffeeSupplyChain/project-6/contracts/coffeeaccesscontrol/Roles.sol",
         "file": "./Roles.sol",
         "id": 160,
         "nodeType": "ImportDirective",
@@ -292,7 +292,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1585,
+                          "referencedDeclaration": 1569,
                           "src": "669:3:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -398,7 +398,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1585,
+                              "referencedDeclaration": 1569,
                               "src": "838:3:2",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -464,10 +464,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1588,
-                        1589
+                        1572,
+                        1573
                       ],
-                      "referencedDeclaration": 1588,
+                      "referencedDeclaration": 1572,
                       "src": "816:7:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -804,7 +804,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1585,
+                          "referencedDeclaration": 1569,
                           "src": "1359:3:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -1267,7 +1267,7 @@
     "src": "0:1882:2"
   },
   "legacyAST": {
-    "absolutePath": "/C/Users/bls24/OneDrive/Documents/GitHub/CoffeeSupplyChain/project-6/contracts/coffeeaccesscontrol/DistributorRole.sol",
+    "absolutePath": "/C/Users/bls24/OneDrive/Documents/Github/CoffeeSupplyChain/project-6/contracts/coffeeaccesscontrol/DistributorRole.sol",
     "exportedSymbols": {
       "DistributorRole": [
         258
@@ -1288,7 +1288,7 @@
         "src": "0:24:2"
       },
       {
-        "absolutePath": "/C/Users/bls24/OneDrive/Documents/GitHub/CoffeeSupplyChain/project-6/contracts/coffeeaccesscontrol/Roles.sol",
+        "absolutePath": "/C/Users/bls24/OneDrive/Documents/Github/CoffeeSupplyChain/project-6/contracts/coffeeaccesscontrol/Roles.sol",
         "file": "./Roles.sol",
         "id": 160,
         "nodeType": "ImportDirective",
@@ -1472,7 +1472,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1585,
+                          "referencedDeclaration": 1569,
                           "src": "669:3:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -1578,7 +1578,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1585,
+                              "referencedDeclaration": 1569,
                               "src": "838:3:2",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -1644,10 +1644,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1588,
-                        1589
+                        1572,
+                        1573
                       ],
-                      "referencedDeclaration": 1588,
+                      "referencedDeclaration": 1572,
                       "src": "816:7:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1984,7 +1984,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1585,
+                          "referencedDeclaration": 1569,
                           "src": "1359:3:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -2481,8 +2481,8 @@
         }
       },
       "links": {},
-      "address": "0x6b7bbC024d6a1D19796205fd269b02671b1E9573",
-      "transactionHash": "0x7eafcc168dfcd12b069f3641a0fc14f9a2d6d26939cc007697d6c20c52cdf2f5"
+      "address": "0xFd339bBDf62809157fb2e4766f7cB8D219f8FB65",
+      "transactionHash": "0x410b99d94c14fd9040c2b5e0b8a695498c6b1d36b2c28d6cb772679773119ad5"
     },
     "5777": {
       "events": {
@@ -2515,11 +2515,11 @@
       },
       "links": {},
       "address": "0xd59a4Ed0C234C41a8BB3dEAB328Df3B62Dc31BaC",
-      "transactionHash": "0x84c5940e035a62c0dd320b41dec3f5046b36b7bfb57944400820c9b95d266695"
+      "transactionHash": "0x0c56f890c91c970d84b944bd653ed2c168b1b120e7913f95e77b5d95abcfb333"
     }
   },
   "schemaVersion": "3.2.5",
-  "updatedAt": "2020-11-05T14:26:26.016Z",
+  "updatedAt": "2020-11-05T23:40:15.499Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}
