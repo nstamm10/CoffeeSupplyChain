@@ -1,0 +1,3 @@
+1. @truffle-hdwallet-provider v1.1.1
+2. truffle-assertions v0.9.0
+3. web3 v1.3.0
