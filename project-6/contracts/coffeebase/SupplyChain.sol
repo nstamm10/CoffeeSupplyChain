@@ -70,13 +70,7 @@ contract SupplyChain is FarmerRole, DistributorRole, RetailerRole, ConsumerRole,
     event Received(uint upc);
     event Purchased(uint upc);
 
-  // Define a modifer that checks to see if msg.sender == owner of the contract
-    //modifier onlyOwner() {
-      //  require(msg.sender == owner);
-        //_;
-  //  }
-
-  // Define a modifer that verifies the Caller
+    // Define a modifer that verifies the Caller
     modifier verifyCaller (address _address) {
         require(msg.sender == _address);
         _;
