@@ -5,9 +5,10 @@ import "../coffeeaccesscontrol/FarmerRole.sol";
 import "../coffeeaccesscontrol/DistributorRole.sol";
 import "../coffeeaccesscontrol/ConsumerRole.sol";
 import "../coffeeaccesscontrol/RetailerRole.sol";
+import "../coffeecore/Ownable.sol";
 
 
-contract SupplyChain is FarmerRole, DistributorRole, RetailerRole, ConsumerRole {
+contract SupplyChain is FarmerRole, DistributorRole, RetailerRole, ConsumerRole, Ownable {
 
 
   // Define 'owner'
@@ -70,10 +71,10 @@ contract SupplyChain is FarmerRole, DistributorRole, RetailerRole, ConsumerRole 
     event Purchased(uint upc);
 
   // Define a modifer that checks to see if msg.sender == owner of the contract
-    modifier onlyOwner() {
-        require(msg.sender == owner);
-        _;
-    }
+    //modifier onlyOwner() {
+      //  require(msg.sender == owner);
+        //_;
+  //  }
 
   // Define a modifer that verifies the Caller
     modifier verifyCaller (address _address) {
